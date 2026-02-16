@@ -1,12 +1,12 @@
 # Delivery reliability → Review → Repeat GMV (Olist)
 
 ## Business question
-**Question:** Yetkazib berish kechikishi va va’da qilingan ETA xatosi `review_score` va `repeat GMV`ni qanchaga tushiryapti? Qaysi seller/category/state’da ta’sir eng katta?
+**Question:** How much does delivery delay and promised ETA error reduce `review_score` and `repeat GMV`? Which seller/category/state is most affected?
 
 **Decision use-cases**
-- Seller policy / penalty / buybox: “delay → low review → churn” driver’larini topish
-- Region (state/city) bo‘yicha logistics muammo va ETA tuning
-- Category bo‘yicha packaging/shipping standard taklifi
+- Seller policy / penalty / buybox: find drivers of “delay → low review → churn”
+- Logistics problem and ETA tuning by region (state/city)
+- Packaging/shipping standard proposal by category
 
 ## Stack
 - Warehouse: PostgreSQL
@@ -23,7 +23,7 @@
 - `fct_payments` (grain: order_id + payment_seq) or aggregated
 
 ### Core dims
-- `dim_customer`, `dim_seller`, `dim_product`, `dim_geo` (optional)
+- `dim_customer`, `dim_seller`, `dim_product`, `dim_geo`
 
 ## Metrics (semantic layer)
 All metric definitions and grain/filters: `docs/metrics.md`
