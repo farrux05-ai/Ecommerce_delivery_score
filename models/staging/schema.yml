@@ -1,0 +1,74 @@
+version: 2
+
+models:
+  - name: stg_olist_orders
+    columns:
+      - name: order_id
+        tests: [not_null, unique]
+      - name: customer_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_olist_customers')
+              field: customer_id
+      - name: order_status
+        tests: [not_null]
+      - name: order_purchase_timestamp
+        tests: [not_null]
+      
+
+
+  - name: stg_olist_customers
+    columns:
+      - name: customer_id
+        tests: [not_null, unique]
+
+  - name: stg_olist_products
+    columns:
+      - name: product_id
+        tests: [not_null, unique]
+
+  - name: stg_product_category_translation
+    columns:
+      - name: product_category_name
+        tests: [not_null, unique]
+
+  - name: stg_olist_sellers
+    columns:
+      - name: seller_id
+        tests: [not_null, unique]
+
+  - name: stg_olist_order_reviews
+    columns:
+      - name: review_id
+        tests: [not_null]
+
+  - name: stg_olist_order_payments
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_olist_orders')
+              field: order_id
+
+  - name: stg_olist_order_items
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_olist_orders')
+              field: order_id
+      - name: product_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_olist_products')
+              field: product_id
+      - name: seller_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_olist_sellers')
+              field: seller_id
