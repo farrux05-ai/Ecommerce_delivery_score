@@ -25,6 +25,9 @@
 ### Core dims
 - `dim_customer`, `dim_seller`, `dim_product`, `dim_geo`
 
+### Marts
+- `mart_growth_kpi`, `mart_growth_cohort_retention_monthly`, `mart_growth_funnel_daily`, `mart_growth_repeat_metrics`, `mart_growth_segments`
+
 ## Metrics (semantic layer)
 All metric definitions and grain/filters: `docs/metrics.md`
 
