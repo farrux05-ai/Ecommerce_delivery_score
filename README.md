@@ -57,9 +57,9 @@ Raw (PostgreSQL)
 | Seller on-time rate range | **0.88 – 0.96** |
 
 **Top insights:**
-- 🚨 Delay is the #1 CSAT killer — targeting the 6.8% late orders gives outsized impact
-- 📍 Geo hotspots: **RJ and BA** show higher delays vs SP; BA has highest avg distance
-- 🏪 Some sellers have high on-time BUT low reviews → packaging/product quality issue
+-  Delay is the #1 CSAT killer — targeting the 6.8% late orders gives outsized impact
+-  Geo hotspots: **RJ and BA** show higher delays vs SP; BA has highest avg distance
+-  Some sellers have high on-time BUT low reviews → packaging/product quality issue
 
 ---
 
