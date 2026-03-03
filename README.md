@@ -17,7 +17,7 @@ Pipeline: `raw → staging → marts → Power BI dashboard`
 
 ![Dashboard](./screenshots/dashboard_overview.png)
 ![Dashboard](./screenshots/cx_impact_curve.png)
-![Dashboard](./screenshots/seller_scorecard.png)
+![Dashboard](./screenshots/seller_scorecard.jpg)
 
 
 **Decision use-cases:**
